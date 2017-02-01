@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int a,b,c,d,e,f,g;
+	scanf("%d %d",&a,&b);
+	c=a+b;
+	if(c<0)
+	{
+		printf("-");
+		c=-c;
+	}
+	d=c/1000000;
+	g=c%1000;
+    e=(c%1000000)/1000;
+    if(d==0)
+	{
+		if(e!=0)
+		{f=c/1000;
+		printf("%d,%03d",f,g);}
+		else
+		{printf("%d",g);}
+	}
+	if(d!=0)
+	{
+		printf("%d,%03d,%03d",d,e,g);
+	}
+	return 0;
+}
